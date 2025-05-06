@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Setup CORS
 const io = socketio(server, {
   cors: {
-    origin: "http://localhost:3001", // Ensure this matches your frontend URL
+    origin: "https://chat-application-niyi0904s-projects.vercel.app/", // Ensure this matches your frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"], // Optional, if you're using custom headers
     credentials: true // If you're using cookies/sessions for authentication
@@ -20,7 +20,7 @@ const io = socketio(server, {
 });
 
 app.use(cors({
-  origin: "http://localhost:3001", // Allow frontend origin
+  origin: "https://chat-application-niyi0904s-projects.vercel.app/", // Allow frontend origin
   methods: ["GET", "POST"],
   credentials: true // If you're using credentials (cookies/sessions)
 }));

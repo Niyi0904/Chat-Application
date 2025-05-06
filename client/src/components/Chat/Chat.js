@@ -23,7 +23,7 @@ const Chat = ({ location }) => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io('http://localhost:5000', {
+    socket = io('https://chat-application-gax5.onrender.com', {
       transports: ['websocket'], // Use WebSocket transport
       withCredentials: true, // Allow credentials (cookies) if needed
     });
